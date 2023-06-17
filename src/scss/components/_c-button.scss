@@ -1,0 +1,98 @@
+@use "../global" as g;
+.c-button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 24px 0;
+  transition: 0.3s ease-in-out;
+  &--arrow {
+    font-size: 1.4rem;
+    background-color: g.$sub-color;
+    color: #fff;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 8px;
+      background-image: url('../images/arrow.svg');
+      position: absolute;
+      top: 0;
+      right: 16px;
+      bottom: 0;
+      margin: auto;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &--tel {
+    color: g.$main-color;
+    background-color: #fff;
+    border: 1px solid g.$main-color;
+    position: relative;
+    padding: 16px 0;
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icon_phone.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: text-bottom;
+    }
+  }
+  &--contact {
+    color: #fff;
+    background-color: g.$sub-color;
+    border: 1px solid g.$sub-color;
+    padding: 16px 0;
+  }
+  &--main {
+    color: #fff;
+    background-color: g.$main-color;
+    border: none;
+    border-radius: 0;
+  }
+  &--external {
+    color: g.$main-color;
+    background-color: #fff;
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icon_external.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: top;
+    }
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    &--arrow:hover {
+      background-color: #E33232;
+      box-shadow: g.$shadow-shallow;
+      &::before {right: 24px;}
+    }
+    &--contact:hover {
+      background-color: #fff;
+      color: g.$sub-color;
+    }
+    &--tel:hover {
+      background-color: g.$main-color;
+      color: #fff;
+      &::before {filter: brightness(0) invert(1);}
+    }
+    &--main:hover {
+      color: g.$main-color;
+      background-color: #fff;
+    }
+    &--external:hover {
+      box-shadow: g.$shadow-shallow;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../global" as g;
+.c-box {
+  background-color: #fff;
+  box-shadow: g.$shadow-shallow;
+  padding: 24px 16px;
+  @include g.bp-tb {padding: 32px 32px;}
+  @include g.bp-pc {padding: 64px 64px;}
+}

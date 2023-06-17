@@ -1,0 +1,6 @@
+@use "../global" as g;
+.u-color {
+  &-main {color: g.$main-color !important;}
+  &-sub {color: g.$sub-color !important;}
+  &-accent {color: g.$accent-color !important;}
+}

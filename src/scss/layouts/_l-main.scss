@@ -1,0 +1,11 @@
+@use "../global" as g;
+.l-main {
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 64px;
+  @include g.bp-tb {
+    padding-top: 85px;
+  }
+  @include g.bp-pc {
+  }
+}

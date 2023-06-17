@@ -1,0 +1,11 @@
+@use "../global" as g;
+.l-section {
+  &__inner {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    &__inner {max-width: g.$desktop;}
+  }
+}

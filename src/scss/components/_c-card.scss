@@ -1,0 +1,37 @@
+@use "../global" as g;
+.c-card {
+  &__thumb {
+    img {transition: 0.3s ease-in-out;}
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  &__meta {
+    margin-bottom: 4px;
+    time {
+      font-size: 1.2rem;
+      color: g.$font-color;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    transition: 0.3s ease-in-out;
+  }
+  a {text-decoration: none;}
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    display: flex;
+    flex-direction: column;
+    a:hover {
+      .c-card__thumb {
+        img {
+          opacity: 0.9;
+          transform: scale(1.1);
+        }
+      }
+      .c-card__title {opacity: 0.7;}
+    }
+  }
+}

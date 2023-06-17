@@ -1,0 +1,184 @@
+<%
+  let pageName='index' ;
+%>
+<%-
+  include('./components/_head' , {
+    title: 'LP開発環境' ,
+  })
+%>
+
+<body ontouchstart="">
+  <!-- header -->
+  <%-
+    include('./components/_header' , {
+      page: pageName,
+    })
+  %>
+  <!-- /header -->
+  <!-- main -->
+  <main class="main">
+    <!-- スライダーのコンテナ -->
+    <div class="swiper">
+      <!-- 必要に応じたwrapper -->
+      <div class="swiper-wrapper">
+        <!-- スライド -->
+        <div class="swiper-slide"><img src="./images/sample.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/sample.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/sample.svg" alt=""></div>
+      </div>
+    </div>
+    <section class="l-section">
+      <div class="l-section__inner">
+        <h2 class="c-secTitle">
+          <div class="c-secTitle__en">SECTITLE</div>
+          <div class="c-secTitle__ja">タイトル</div>
+          <div class="c-secTitle__line"></div>
+        </h2>
+        <a class="c-button c-button--arrow" href="">ボタン</a>
+        <table class="c-table c-table--line">
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+        </table>
+        <table class="c-table">
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+          <tr>
+            <th>タイトル</th>
+            <td>中身</td>
+          </tr>
+        </table>
+        <div class="l-row l-row--3">
+          <div class="l-row__col l-column">
+            <img src="./images/sample.jpg" alt="">
+            <p>テキスト</p>
+            <div><a href="" class="c-button c-button--arrow">ボタン</a></div>
+          </div>
+          <div class="l-row__col l-column">
+            <img src="./images/sample.jpg" alt="">
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <div><a href="" class="c-button c-button--arrow">ボタン</a></div>
+          </div>
+          <div class="l-row__col l-column">
+            <img src="./images/sample.jpg" alt="">
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <div><a href="" class="c-button c-button--arrow">ボタン</a></div>
+          </div>
+        </div>
+        <span class="c-label c-label--new">NEW</span>
+        <a class="c-label">ラベル</a>
+        <span class="c-label c-label--must">必須</span>
+        <div class="c-form">
+          <div class="c-form__radio">
+            <label for="01">
+              <input type="radio" name="radio" id="01">
+              <span>ラジオ</span>
+            </label>
+            <label for="02">
+              <input type="radio" name="radio" id="02">
+              <span>ラジオ</span>
+            </label>
+          </div>
+          <div class="c-form__checkbox">
+            <label for="03">
+              <input type="checkbox" name="check" id="03">
+              <span>チェックボックス</span>
+            </label>
+          </div>
+          <div class="c-form__text">
+            <input type="text" name="" id="" placeholder="テキストがはいります">
+          </div>
+          <div class="c-form__submit">
+            <input type="submit" value="送信する">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="l-section">
+      <div class="l-section__inner">
+        <h2>アコーディオン</h2>
+        <div>
+          <div class="c-accordion">
+            <div class="c-accordion__title">アコーディオントリガー</div>
+            <div class="c-accordion__content">
+              <p>アコーディオンのコンテンツがはいります。<br>アコーディオンのコンテンツがはいります。</p>
+            </div>
+          </div>
+          <div class="c-accordion">
+            <div class="c-accordion__title">アコーディオントリガー</div>
+            <div class="c-accordion__content">
+              <p>アコーディオンのコンテンツがはいります。<br>アコーディオンのコンテンツがはいります。</p>
+            </div>
+          </div>
+        </div>
+        <h2>モーダル</h2>
+        <button class="js-modalTrigger" data-modal="modal01">モーダル1</button>
+        <button class="js-modalTrigger" data-modal="modal02">モーダル2</button>
+        <button class="js-modalTrigger" data-modal="modal03">モーダル3</button>
+
+      </div>
+    </section>
+  </main>
+  <!-- /main -->
+
+  <!-- footer -->
+  <%-
+    include('./components/_footer' , {
+      page: pageName,
+    })
+  %>
+  <!-- /footer -->
+  <!-- modal01 -->
+  <div id="modal01" class="c-modal">
+    <div class="c-modal__bg js-modalClose"></div>
+    <div class="c-modal__contents">
+      <div class="c-modal__close js-modalClose">×</div>
+      <div class="c-modal__container">
+        <p>モーダル01</p>
+        <ol>
+          <li>あああ</li>
+          <li>あああ</li>
+          <li>あああ</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- modal02 -->
+  <div id="modal02" class="c-modal">
+    <div class="c-modal__bg js-modalClose"></div>
+    <div class="c-modal__contents">
+      <div class="c-modal__close js-modalClose">×</div>
+      <div class="c-modal__container">
+        <p>モーダル02</p>
+      </div>
+    </div>
+  </div>
+  <!-- modal03 -->
+  <div id="modal03" class="c-modal">
+    <div class="c-modal__bg js-modalClose"></div>
+    <div class="c-modal__contents">
+      <div class="c-modal__close js-modalClose">×</div>
+      <div class="c-modal__container">
+        <p>モーダル03</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bundle.js"></script>
+</body>
+</html>

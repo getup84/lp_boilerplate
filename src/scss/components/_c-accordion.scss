@@ -1,0 +1,17 @@
+@use "../global" as g;
+.c-accordion {
+  &__content {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: 0.3s;
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      transition: 0.3s;
+    }
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {}
+}

@@ -1,0 +1,43 @@
+@use "./variables" as g;
+
+// ==============================
+//  Media Query
+// ==============================
+@mixin bp-tb {
+  @media screen and (min-width: g.$tablet) {
+    @content;
+  }
+}
+
+@mixin bp-pc {
+  @media screen and (min-width: g.$desktop) {
+    @content;
+  }
+}
+// ==============================
+//  Hover
+// ==============================
+@mixin hover {
+  transition: 0.3s ease-in-out;
+  &:hover {opacity: 0.7;}
+}
+// ==============================
+//  Flex
+// ==============================
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+// ==============================
+//  Position
+// ==============================
+@mixin position-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

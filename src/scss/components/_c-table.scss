@@ -1,0 +1,55 @@
+@use "../global" as g;
+.c-table {
+  width: 100%;
+  th {
+    background-color: g.$main-color;
+    color: #fff;
+  }
+  th,
+  td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 16px 32px;
+  }
+  th {
+    font-weight: bold;
+  }
+  td {border: 1px solid #ddd;}
+  &--line {
+    tr {
+      border-bottom: 1px solid #ddd;
+      &:first-child {border-top: 1px solid #ddd;}
+    }
+    th {
+      background-color: inherit;
+      color: g.$font-color;
+      padding: 24px 0 0 0;
+    }
+    td {
+      padding: 0 0 24px 0;
+      border: none;
+    }
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    th,
+    td {
+      display: table-cell;
+    }
+    th {
+      width: 30%;
+      border: 1px solid #fff;
+    }
+    td {width: 70%;}
+    &--line {
+      th {
+        border: none;
+        padding: 24px 0;
+      }
+      td {padding: 24px 0;}
+    }
+  }
+}

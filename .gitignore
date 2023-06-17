@@ -1,0 +1,4 @@
+# フォルダを無視
+dist/
+node_modules/
+dist.zip

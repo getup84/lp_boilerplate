@@ -1,0 +1,9 @@
+@use "../global" as g;
+.c-logo {
+  max-width: 145px;
+  a {transition: 0.3s ease-in-out;}
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    a:hover {opacity: 0.7;}
+  }
+}

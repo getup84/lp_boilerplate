@@ -1,0 +1,7 @@
+@use "../global" as g;
+.u-alignitems {
+  &-center {align-items: center;}
+  &-end {align-items: flex-end;}
+  &-start {align-items: flex-start;}
+  &-inherit {align-items: inherit;}
+}

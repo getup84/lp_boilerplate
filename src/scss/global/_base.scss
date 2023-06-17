@@ -1,0 +1,30 @@
+@use "./global" as g;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: g.$font-ja;
+  font-size: 1.6rem;
+  color: g.$font-color;
+  font-weight: 400;
+  background-color: g.$main-color;
+}
+a {
+  color: g.$main-color;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+p {line-height: 1.6;}
+dl dt {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+dl dd {
+  margin-left: 0;
+  margin-bottom: 2em;
+}
+p, h1, h2, h3, h4, h5, h6, ul, ol {margin: 0;}
+ul, li {padding: 0;}

@@ -1,0 +1,13 @@
+@use "../global" as g;
+.c-lead {
+  color: #333;
+  font-size: 2.0rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  @include g.bp-tb {
+    font-size: 2.4rem;
+  }
+  @include g.bp-pc {
+  }
+}

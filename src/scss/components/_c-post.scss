@@ -1,0 +1,36 @@
+@use "../global" as g;
+.c-post {
+  h2 {
+    color: #333;
+    font-size: 2.0rem;
+    font-weight: 700;
+    line-height: 1.6;
+    padding-left: 16px;
+    border-left: 8px solid g.$main-color;
+    margin: 1.6em 0;
+  }
+  h3 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    background-color: #BAE2E1;
+    padding: 8px 16px;
+    margin: 1.6em 0;
+  }
+  img {
+    margin: 16px 0;
+  }
+  a {
+    @include g.hover;
+  }
+  @include g.bp-tb {
+    h2 {font-size: 2.4rem;}
+    h3 {
+      font-size: 2.0rem;
+      padding: 16px 32px;
+    }
+  }
+  @include g.bp-pc {
+  }
+}

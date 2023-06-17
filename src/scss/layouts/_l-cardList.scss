@@ -1,0 +1,19 @@
+@use "../global" as g;
+.l-cardList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    &:not(:last-child) {margin-bottom: 24px;}
+  }
+  @include g.bp-tb {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    &__item {
+      width: 33.33%;
+      padding: 0 8px;
+    }
+  }
+  @include g.bp-pc {}
+}

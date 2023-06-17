@@ -1,0 +1,12 @@
+@use "../global" as g;
+.c-copyright {
+  text-align: center;
+  padding: 16px 0;
+  border-top: 1px solid #ddd;
+  small {
+    font-size: 1.0rem;
+    color: #999;
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {}
+}

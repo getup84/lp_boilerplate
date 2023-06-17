@@ -1,0 +1,67 @@
+@use "../global" as g;
+.c-header {
+  width: 100%;
+  position: relative;
+
+  &__inner {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    position: relative;
+    z-index: 901;
+  }
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50vw 120px 0;
+    border-color: transparent g.$sub-color transparent transparent;
+    transition: 0.3s ease-in-out;
+  }
+  &__nav {display: none;}
+  &__logo {transition: 0.3s ease-in-out;}
+  &.is-open {
+    .c-header__logo {filter: brightness(0) invert(1);}
+    .c-hamburgerNav {
+      transform: translate(0, 0);
+    }
+    .c-header__bg {
+      border-width: 0 100vw 100vh 0;
+    }
+  }
+  @include g.bp-tb {}
+  @include g.bp-pc {
+    background-color: #fff;
+    box-shadow: g.$shadow-shallow;
+    &__hamburger {display: none;}
+    &__bg {display: none;}
+    &__nav {
+      display: block;
+      ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        a {transition: 0.3s ease-in-out;}
+        &:nth-child(-n+5) {
+          margin-right: 32px;
+          a {
+            text-decoration: none;
+            color: #555;
+            &:hover {color: g.$main-color;}
+          }
+        }
+        &:nth-child(6),
+        &:nth-child(7) {width: 224px;}
+        &:nth-child(6) {margin-right: 8px;}
+      }
+    }
+  }
+}
