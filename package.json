@@ -43,6 +43,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "swiper": "^8.1.4"
   },
   "babel": {
