@@ -1,9 +1,0 @@
-@use "../global" as g;
-.l-column {
-  @include g.bp-tb {}
-  @include g.bp-pc {
-    display: flex;
-    flex-direction: column;
-    &__glow {flex: auto;}
-  }
-}

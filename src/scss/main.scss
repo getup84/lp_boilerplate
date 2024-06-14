@@ -2,14 +2,5 @@
 @use "./global/normalize";
 @use "./global/base";
 
-// =============== Components ===============
-@use "./components/**/*.scss";
-
 // =============== Layouts ===============
 @use "./layouts/**/*.scss";
-
-// =============== Pages ===============
-@use "./pages/**/*.scss";
-
-// =============== Utility ===============
-@use "./utility/**/*.scss";

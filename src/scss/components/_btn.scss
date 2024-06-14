@@ -1,5 +1,0 @@
-@use "../global" as g;
-.c-name {
-  @include g.bp-tb {}
-  @include g.bp-pc {}
-}

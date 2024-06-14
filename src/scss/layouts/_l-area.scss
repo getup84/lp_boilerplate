@@ -1,0 +1,58 @@
+@use "../global" as g;
+.l-area {
+  position: relative;
+  overflow-x: hidden;
+  padding: 64px 5%;
+  background-image: url('../images/area_bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.l-area__title {
+  text-align: center;
+  font-size: clamp(2.8rem, 3.58vw, 6.4rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.l-area__title-bg {
+  font-size: clamp(12.8rem, 10vw, 38.4rem);
+  font-weight: 900;
+  color: var(--white);
+  opacity: 0.1;
+  position: absolute;
+  right: -0.5em;
+  top: -0.1em;
+}
+.l-area__title-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+  color: var(--white);
+}
+.l-area__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.l-area__item {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.l-area__img {}
+.l-area__name {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--main-color);
+  padding: 16px 0;
+}
+.l-area__address {
+  font-size: 1.4rem;
+  padding: 0 32px 16px;
+}
+.l-area__num {
+  text-align: right;
+  font-size: 1.0rem;
+  padding: 0 32px 16px;
+}

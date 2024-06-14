@@ -1,0 +1,47 @@
+@use "../global" as g;
+.l-cta {
+  background-color: var(--line-color);
+}
+.l-cta__title {
+  text-align: center;
+  padding: 16px 0 0;
+}
+.l-cta__title--02 {
+  max-width: 70%;
+  margin: 0 auto;
+}
+.l-cta__box {
+  padding: 4px;
+}
+.l-cta__box-inner {
+  background-color: #fff;
+  padding: 16px;
+}
+.l-cta__btn {
+  padding: 16px 0;
+}
+.l-cta__btn-title {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto 4px;
+}
+.l-cta__btn-link {text-align: center;}
+.l-cta__btn-text {
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+.l-cta__btn-link img {
+  animation: anime1 1s ease 0s infinite alternate;
+  transform-origin:center;
+}
+@keyframes anime1 {
+  0% {
+    transform: scale(0.9,0.9);
+  }
+  50% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}

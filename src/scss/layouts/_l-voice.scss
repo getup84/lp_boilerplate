@@ -1,0 +1,63 @@
+@use "../global" as g;
+.l-voice {
+  position: relative;
+  overflow-x: hidden;
+  padding: 64px 5%;
+}
+.l-voice__title {
+  text-align: center;
+  font-size: clamp(2.8rem, 3.58vw, 6.4rem);
+  font-weight: 700;
+  color: var(--sub-color);
+  margin-bottom: 8px;
+}
+.l-voice__title-bg {
+  font-size: clamp(12.8rem, 10vw, 38.4rem);
+  font-weight: 900;
+  color: var(--sub-color);
+  opacity: 0.1;
+  position: absolute;
+  right: -0.5em;
+  top: -0.1em;
+}
+.l-voice__title-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+}
+.l-voice__img {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.l-voice__age {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--font-black);
+  margin-bottom: 8px;
+}
+.l-voice__address {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--font-black);
+  margin-bottom: 8px;
+}
+.l-voice__text {
+  font-size: 1.4rem;
+  padding: 0 5%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../images/arrow_slier.svg');
+  z-index: 1;
+}
+.swiper-button-prev {transform: rotate(180deg);}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}

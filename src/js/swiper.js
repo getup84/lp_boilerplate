@@ -7,12 +7,16 @@ export const swiper = () => {
       // オプション
       let swiperOption = {
         loop: true,
-        effect: 'fade',
+        effect: 'slider',
         autoplay: {
           delay: 4000,
           disableOnInteraction: false
         },
-        speed: 2000
+        speed: 1000,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
       }
       new Swiper(ele, swiperOption);
     }

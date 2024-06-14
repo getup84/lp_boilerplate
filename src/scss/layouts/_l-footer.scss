@@ -1,0 +1,15 @@
+@use "../global" as g;
+.l-footer {
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: var(--main-color);
+  padding: 16px 0;
+}
+.l-footer__btn {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.l-footer__copy {
+  text-align: center;
+  color: var(--white);
+}

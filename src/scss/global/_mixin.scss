@@ -3,14 +3,20 @@
 // ==============================
 //  Media Query
 // ==============================
-@mixin bp-tb {
-  @media screen and (min-width: g.$tablet) {
+@mixin bp-sm {
+  @media screen and (min-width: g.$bp-tablet) {
     @content;
   }
 }
 
-@mixin bp-pc {
-  @media screen and (min-width: g.$desktop) {
+@mixin bp-md {
+  @media screen and (min-width: g.$bp-laptop) {
+    @content;
+  }
+}
+
+@mixin bp-lg {
+  @media screen and (min-width: g.$bp-desktop) {
     @content;
   }
 }
@@ -40,4 +46,13 @@
   right: 0;
   left: 0;
   margin: auto;
+}
+// ==============================
+//  Inner
+// ==============================
+@mixin inner {
+  width: 90%;
+  margin: 0 auto;
+  @include bp-md {max-width: g.$bp-laptop;}
+  @include bp-lg {max-width: g.$bp-desktop;}
 }

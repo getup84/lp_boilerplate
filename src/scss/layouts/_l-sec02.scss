@@ -1,0 +1,17 @@
+@use "../global" as g;
+.l-sec02 {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: clamp(62px, 15.64vw, 120px);
+    height: clamp(30px, 6.66vw, 60px);
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+    background-color: #151515;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

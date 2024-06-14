@@ -1,9 +1,3 @@
-import { hamburger } from './hamburger';
-import { accordion } from './accordion';
-import { modal } from './modal';
-import { aos } from './aos';
+import { swiper } from './swiper';
 
-hamburger();
-accordion();
-modal();
-aos();
+swiper();

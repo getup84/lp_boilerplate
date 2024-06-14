@@ -1,8 +1,0 @@
-@use "../global" as g;
-.l-header {
-  position: fixed;
-  z-index: 100;
-  @include g.bp-tb {}
-  @include g.bp-pc {
-  }
-}

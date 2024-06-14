@@ -1,9 +1,0 @@
-@use "../global" as g;
-.u-justify {
-  &-center {justify-content: center;}
-  &-end {justify-content: flex-end;}
-  &-start {justify-content: flex-start;}
-  &-around {justify-content: space-around;}
-  &-between {justify-content: space-between;}
-  &-inherit {justify-content: inherit;}
-}
